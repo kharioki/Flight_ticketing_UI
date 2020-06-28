@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Dimensions,
 } from 'react-native';
 import BackgroundCurve from './src/components/BackgroundCurve';
 
@@ -21,13 +22,22 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <View>
-        <BackgroundCurve />
+      <View style={styles.container}>
+        <BackgroundCurve style={styles.svg} />
       </View>
     </>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    position: 'relative',
+  },
+  svg: {
+    position: 'absolute',
+    width: Dimensions.get('window').width,
+  },
+});
 
 export default App;
