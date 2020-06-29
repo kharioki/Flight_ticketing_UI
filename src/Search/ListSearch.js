@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 80,
     padding: 10,
+    backgroundColor: '#fff',
   },
   headerContainer: {
     paddingHorizontal: 15,
@@ -60,8 +61,8 @@ const styles = StyleSheet.create({
     color: '#5f646a',
   },
   itemContainer: {
-    borderWidth: 1,
-    borderColor: '#828595',
+    borderWidth: 1.5,
+    borderColor: '#efeff0',
     marginBottom: 12,
     padding: 20,
     borderRadius: 12,
