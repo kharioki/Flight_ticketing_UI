@@ -6,6 +6,7 @@ import {View} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 import Home from './src/Home';
+import Search from './src/Search';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,11 +38,11 @@ export default function App() {
       <Tab.Navigator
         screenOptions={screenOptions}
         tabBarOptions={{
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray',
+          activeTintColor: '#fb7200',
+          inactiveTintColor: '#464962',
         }}>
         <Tab.Screen name="Explore" component={Home} />
-        <Tab.Screen name="Watchlist" component={Blank} />
+        <Tab.Screen name="Watchlist" component={Search} />
         <Tab.Screen name="Details" component={Blank} />
         <Tab.Screen name="Notifications" component={Blank} />
       </Tab.Navigator>
