@@ -8,7 +8,7 @@ export default function BoxItem() {
       <View style={styles.containerLeft}>
         <Text style={styles.headerText}>Nairobi (NBO)</Text>
         <Text style={[styles.headerText, {color: '#222', marginTop: 10}]}>
-          Entebbe (ETB)
+          Phuket (HKT)
         </Text>
       </View>
       <MaterialIcons name="swap-vert" size={28} color="#828595" />

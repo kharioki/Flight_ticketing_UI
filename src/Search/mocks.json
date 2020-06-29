@@ -1,39 +1,44 @@
 [
   {
-    "price": "$4,159",
-    "priceOriginal": "$9,9999",
+    "id": 1,
+    "price": "$1,159",
+    "priceOriginal": "$1,999",
     "time": "Feb 2021",
     "airline": "Etihad Airways",
     "rating": "4.6",
     "saleoff": "55"
   },
   {
-    "price": "$5,199",
-    "priceOriginal": "$6,9999",
+    "id": 2,
+    "price": "$899",
+    "priceOriginal": "$1,199",
     "time": "Feb 2021",
     "airline": "Ethiopian Airlines",
     "rating": "4.3",
     "saleoff": "15"
   },
   {
-    "price": "$6,559",
-    "priceOriginal": "$7,9999",
+    "id": 3,
+    "price": "$1,559",
+    "priceOriginal": "$1,999",
     "time": "Feb 2021",
     "airline": "Kenya Airways",
     "rating": "4.6",
     "saleoff": "55"
   },
   {
-    "price": "$4,159",
-    "priceOriginal": "$9,9999",
+    "id": 4,
+    "price": "$959",
+    "priceOriginal": "$1,699",
     "time": "Feb 2021",
     "airline": "Etihad Airways",
     "rating": "4.6",
     "saleoff": "55"
   },
   {
-    "price": "$4,159",
-    "priceOriginal": "$9,9999",
+    "id": 5,
+    "price": "$1,159",
+    "priceOriginal": "$2,149",
     "time": "Feb 2021",
     "airline": "Etihad Airways",
     "rating": "4.6",

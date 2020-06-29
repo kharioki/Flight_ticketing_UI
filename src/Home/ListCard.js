@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     color: 'gray',
     fontWeight: 'bold',
     fontSize: 15,
+    textDecorationLine: 'line-through',
   },
   itemInner: {
     position: 'absolute',

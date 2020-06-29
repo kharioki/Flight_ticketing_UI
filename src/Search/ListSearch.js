@@ -3,33 +3,40 @@ import {StyleSheet, Text, View} from 'react-native';
 import mocks from './mocks.json';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+const ItemView = ({item}) => (
+  <View style={styles.itemContainer} key={item.id}>
+    <Text style={styles.itemPrice}>
+      {item.price}{' '}
+      <Text style={styles.itemPriceOriginal}>({item.priceOriginal})</Text>
+    </Text>
+    <View style={styles.itemFooter}>
+      <Text style={styles.itemText}>
+        <Ionicons name="ios-calendar" style={styles.icon} />
+        {'  '} {item.time}
+      </Text>
+      <Text style={styles.itemText}>
+        <Ionicons name="ios-airplane" style={styles.icon} />
+        {'  '}
+        {item.airline}
+      </Text>
+      <Text style={styles.itemText}>
+        <Ionicons name="ios-star" style={styles.icon} />
+        {'  '} {item.rating}
+      </Text>
+    </View>
+    <Text style={styles.saleoff}>{item.saleoff}%</Text>
+  </View>
+);
+
 export default function ListSearch() {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <Text style={styles.heading}>Best Deals for the Next 6 Months</Text>
       </View>
-      <View>
+      <View style={styles.bodyContainer}>
         {mocks.map((item, index) => (
-          <View style={styles.itemContainer} key={index}>
-            <Text style={styles.itemPrice}>
-              {item.price}{' '}
-              <Text style={styles.itemPriceOriginal}>
-                ({item.priceOriginal})
-              </Text>
-            </Text>
-            <View style={styles.itemFooter}>
-              <Text style={styles.itemText}>
-                <Ionicons name="ios-calendar" /> {item.time}
-              </Text>
-              <Text style={styles.itemText}>
-                <Ionicons name="ios-airplane" /> {item.airline}
-              </Text>
-              <Text style={styles.itemText}>
-                <Ionicons name="ios-star" /> {item.rating}
-              </Text>
-            </View>
-          </View>
+          <ItemView item={item} />
         ))}
       </View>
     </View>
@@ -44,6 +51,9 @@ const styles = StyleSheet.create({
   headerContainer: {
     paddingHorizontal: 15,
   },
+  bodyContainer: {
+    marginTop: 15,
+  },
   heading: {
     fontSize: 16,
     fontWeight: 'bold',
@@ -51,7 +61,7 @@ const styles = StyleSheet.create({
   },
   itemContainer: {
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: '#828595',
     marginBottom: 12,
     padding: 20,
     borderRadius: 12,
@@ -66,6 +76,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 'bold',
     color: '#828595',
+    textDecorationLine: 'line-through',
   },
   itemFooter: {
     flexDirection: 'row',
@@ -75,5 +86,19 @@ const styles = StyleSheet.create({
     color: '#24333a',
     fontSize: 14,
     fontWeight: 'bold',
+  },
+  icon: {
+    marginRight: 10,
+  },
+  saleoff: {
+    position: 'absolute',
+    backgroundColor: '#fff0e8',
+    color: '#ff7200',
+    fontWeight: 'bold',
+    padding: 6,
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    right: -10,
+    top: 10,
   },
 });
