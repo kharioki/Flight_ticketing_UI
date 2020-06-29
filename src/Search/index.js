@@ -1,16 +1,28 @@
 import React from 'react';
-import {View, Text, StyleSheet, Dimensions, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Dimensions,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import BoxItem from './BoxItem.js';
 import ListSearch from './ListSearch.js';
+import {useNavigation} from '@react-navigation/native';
 
 export default Search = () => {
+  const nav = useNavigation();
+
   return (
     <View style={styles.container}>
       <BackgroundCurve style={styles.svg} />
       <ScrollView style={styles.bodyContainer}>
         <View style={styles.headerContainer}>
-          <Entypo name="chevron-left" color="#fff" size={30} />
+          <TouchableOpacity onPress={() => nav.goBack()}>
+            <Entypo name="chevron-left" color="#fff" size={30} />
+          </TouchableOpacity>
           <Text style={styles.headerText}>Search Result</Text>
         </View>
         <BoxItem />

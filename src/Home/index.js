@@ -15,8 +15,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import BackgroundCurve from '../components/BackgroundCurve';
 import ListCard from './ListCard';
+import {useNavigation} from '@react-navigation/native';
 
 export default Home = () => {
+  const navigate = useNavigation();
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -42,11 +45,13 @@ export default Home = () => {
               <View style={styles.inputSearchContainer}>
                 <TextInput
                   style={styles.inputSearch}
-                  value="Jomo Kenyatta International (JKIA)"
+                  value="Phuket, Thailand (HKT)"
                 />
-                <View style={styles.buttonSearch}>
+                <TouchableOpacity
+                  style={styles.buttonSearch}
+                  onPress={() => navigate.navigate('Watchlist')}>
                   <Feather name="search" color="gray" size={16} />
-                </View>
+                </TouchableOpacity>
               </View>
               <View style={styles.listBtn}>
                 <TouchableOpacity style={styles.button}>
