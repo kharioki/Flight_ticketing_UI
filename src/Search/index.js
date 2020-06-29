@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Dimensions, ScrollView} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import BoxItem from './BoxItem.js';
+import ListSearch from './ListSearch.js';
 
 export default Search = () => {
   return (
@@ -13,6 +14,7 @@ export default Search = () => {
           <Text style={styles.headerText}>Search Result</Text>
         </View>
         <BoxItem />
+        <ListSearch />
       </ScrollView>
     </View>
   );
