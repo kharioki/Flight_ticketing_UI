@@ -22,6 +22,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import BackgroundCurve from './src/components/BackgroundCurve';
+import ListCard from './src/Home/ListCard';
 
 const App = () => {
   return (
@@ -66,6 +67,7 @@ const App = () => {
               </View>
             </View>
           </View>
+          <ListCard />
         </ScrollView>
       </View>
     </>
